@@ -1,0 +1,51 @@
+<style>
+    :host {
+        background-color: #fafafa;
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    
+    .report-designer {
+        display: grid;
+    }
+    
+    .report-canvas {
+        border: 1px solid #eee;
+        -moz-box-shadow: 0 2px 8px 0 rgb(0, 0, 0, 0.2); /* 老的 Firefox */
+        box-shadow: 0 2px 8px 0 rgb(0, 0, 0, 0.2);
+    }
+    
+    .canvas {
+        background-color: white;
+    }
+
+    .main-designer {
+        position: relative;
+    }
+    
+    .report-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+</style>
+<div class="report-designer" #reportDesigner>
+    <div></div>
+    <canvas class="canvas" #hRuler>您的浏览器不支持画布!</canvas>
+    <canvas class="canvas" #vRuler>您的浏览器不支持画布!</canvas>
+    <div class="main-designer" #mainDesigner>
+        <rich-text></rich-text>
+        <canvas class="report-canvas canvas" #reportCanvas>您的浏览器不支持画布!</canvas>
+
+        <report-masker #masker></report-masker>
+        <resizer-row></resizer-row>
+        <resizer-column></resizer-column>
+    </div>
+</div>

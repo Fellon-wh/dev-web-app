@@ -1,0 +1,27 @@
+<style>
+    :host.resizer {
+        position: absolute;
+    }
+    
+    :host.resizer-row {
+        left: 0;
+        cursor: row-resize;
+        width: 100%;
+    }
+    
+    .resizer-header {
+        height: 5px;
+        position: relative;
+        background-color: rgba(24, 144, 255, .5);
+    }
+    .resizer-none {
+        background-color: rgba(24, 144, 255, .0);
+    }
+    
+    .resizer-row-line {
+        height: 0;
+        border-top: 1px dashed #1890ff;
+    }
+</style>
+<div class="resizer-header" [ngClass]="{'resizer-none': mouseEventService.isRowResizing}"  [style.left.px]="resizerService.startLeft" [style.width.px]="resizerService.lineWidth"></div>
+<div *ngIf="mouseEventService.isRowResizing" class="resizer-row-line"></div>

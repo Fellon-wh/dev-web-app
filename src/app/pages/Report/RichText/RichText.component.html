@@ -1,0 +1,18 @@
+<style>
+    :host {
+        position: absolute;
+    }
+    .rich-text-area {
+        resize: none;
+        position: absolute;
+        z-index: 9999;
+    }
+    
+    .rich-text-area, .rich-text-area:focus {
+        outline: none !important;
+        border: 2px solid #1890ff;
+        box-sizing: border-box;
+    }
+</style>
+<!-- <div [ngStyle]="{ top: rect.top + 'px', left: rect.left + 'px', width: rect.width + 'px', height: rect.height + 'px' }" class="rich-text-area" contenteditable="true"></div> -->
+<textarea class="rich-text-area"></textarea>

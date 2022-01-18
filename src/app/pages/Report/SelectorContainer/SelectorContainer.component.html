@@ -1,0 +1,23 @@
+<style>
+    .selector-container {
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    .selector-rect {
+        position: absolute;
+        border: 2px solid #1890ff;
+        box-sizing: border-box;
+        background-color: rgba(24, 144, 255, .1);
+    
+        top: 105px;
+        left: 105px;
+        width: 80px;
+        height: 30px;
+    }
+</style>
+<ng-container *ngFor="let r of rects">
+    <div class="selector-rect" [ngStyle]="{ top: r.top + 'px', left: r.left + 'px', width: r.width + 'px', height: r.height + 'px' }"></div>
+</ng-container>

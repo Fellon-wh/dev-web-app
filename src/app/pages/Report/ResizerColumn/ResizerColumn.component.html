@@ -1,0 +1,31 @@
+<style>
+    :host.resizer {
+        position: absolute;
+    }
+
+    :host.resizer-column {
+        top: 0;
+        cursor: col-resize;
+        height: 100%;
+    }
+
+    .resizer-header {
+        width: 5px;
+        position: relative;
+        background-color: rgba(24, 144, 255, .5);
+    }
+    .resizer-none {
+        background-color: rgba(24, 144, 255, .0);
+    }
+
+    .resizer-column-line {
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        height: 100%;
+        border-left: 1px dashed #1890ff;
+    }
+</style>
+<div class="resizer-header" [ngClass]="{'resizer-none': mouseEventService.isColumnResizing}"  [style.top.px]="resizerService.startTop" [style.height.px]="resizerService.lineHeight"></div>
+<div *ngIf="mouseEventService.isColumnResizing" class="resizer-column-line"></div>

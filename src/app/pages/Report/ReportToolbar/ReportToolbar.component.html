@@ -1,0 +1,132 @@
+<style>
+    :host.report-toolbar, .toolbar-item {
+        display: flex;
+        height: 30px;
+        box-sizing: border-box;
+        
+    }
+    
+    :host.report-toolbar {
+        font-size: 14px;
+        border-bottom: 0.5px solid #f1f3f4;
+    }
+    
+    .toolbar-item {
+        cursor: pointer;
+        min-width: 30px;
+        border-radius: 2px;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .toolbar-item:hover {
+        background: #f1f3f4;
+    }
+    
+    .toolbar-item:active {
+        background: rgba(24, 144, 255, 0.1);
+    }
+    
+    .toolbar-divider {
+        display: block;
+        width: 1px;
+        height: 22px;
+        background-color: #e8eaed;
+        margin: 0 4px;
+        align-self: center;
+    }
+    
+    .toolbar-icon {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+    }
+    
+    /* .cell-merge-icon {
+        background-image: url("../../../../../../assets/images/report/cell-merge.png");
+    }
+    
+    .cell-split-icon {
+        background-image: url("../../../../../../assets/images/report/cell-split.png");
+    }
+    
+    .row-insert-above-icon {
+        background-image: url("../../../../../../assets/images/report/row-insert-above.png");
+    }
+    
+    .row-insert-below-icon {
+        background-image: url("../../../../../../assets/images/report/row-insert-below.png");
+    }
+    
+    .row-delete-icon {
+        background-image: url("../../../../../../assets/images/report/row-delete.png");
+    }
+    
+    .column-insert-left-icon {
+        background-image: url("../../../../../../assets/images/report/column-insert-left.png");
+    }
+    
+    .column-insert-right-icon {
+        background-image: url("../../../../../../assets/images/report/column-insert-right.png");
+    }
+    
+    .column-delete-icon {
+        background-image: url("../../../../../../assets/images/report/column-delete.png");
+    }
+    
+    .section-insert-above-icon {
+        background-image: url("../../../../../../assets/images/report/section-insert-above.png");
+    }
+    
+    .section-insert-below-icon {
+        background-image: url("../../../../../../assets/images/report/section-insert-below.png");
+    }
+    
+    .section-delete-icon {
+        background-image: url("../../../../../../assets/images/report/section-delete.png");
+    } */
+    
+</style>
+
+<div class="toolbar-item" (click)="onClickCellMerge()" title="合并单元格">
+    <i class="toolbar-icon cell-merge-icon iconfont">&#xe901;</i>
+</div>
+<div class="toolbar-item" (click)="onClickCellSplit()" title="拆分单元格">
+    <i class="toolbar-icon cell-split-icon iconfont">&#xe904;</i>
+</div>
+<div class="toolbar-divider"></div>
+
+<div class="toolbar-item" (click)="onClickRowInsertAbove()" title="上插入行">
+    <i class="toolbar-icon row-insert-above-icon iconfont">&#xe903;</i>
+</div>
+<div class="toolbar-item" (click)="onClickRowInsertBelow()" title="下插入行">
+    <i class="toolbar-icon row-insert-below-icon iconfont">&#xe902;</i>
+</div>
+<div class="toolbar-item" (click)="onClickRowDelete()" title="删除行">
+    <i class="toolbar-icon row-delete-icon iconfont">&#xe907;</i>
+</div>
+<div class="toolbar-divider"></div>
+
+<div class="toolbar-item" (click)="onClickColumnInsertLeft()" title="左插入列">
+    <i class="toolbar-icon column-insert-left-icon iconfont">&#xe906;</i>
+</div>
+<div class="toolbar-item" (click)="onClickColumnInsertRight()" title="右插入列">
+    <i class="toolbar-icon column-insert-right-icon iconfont">&#xe905;</i>
+</div>
+<div class="toolbar-item" (click)="onClickColumnDelete()" title="删除列">
+    <i class="toolbar-icon column-delete-icon iconfont">&#xe900;</i>
+</div>
+<div class="toolbar-divider"></div>
+
+<div class="toolbar-item" (click)="onClickSectionInsertAbove()" title="上插入段">
+    <i class="toolbar-icon section-insert-above-icon iconfont">&#xe77b;</i>
+</div>
+<div class="toolbar-item" (click)="onClickSectionInsertBelow()" title="下插入段">
+    <i class="toolbar-icon section-insert-below-icon iconfont">&#xe784;</i>
+</div>
+<div class="toolbar-item" (click)="onClickSectionDelete()" title="删除段">
+    <i class="toolbar-icon section-delete-icon iconfont">&#xe50a;</i>
+</div>
