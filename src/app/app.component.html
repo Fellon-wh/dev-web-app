@@ -12,16 +12,23 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="功能" nzIcon="tag">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/rootscope">域/重载</a>
+          </li>
+        </ul>
+      </li>
       <li nz-submenu nzOpen nzTitle="设计工具" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/report">报表</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>表格</a>
+            <a routerLink="/excel">表格</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>流程图</a>
+            <a routerLink="/process">流程图</a>
           </li>
         </ul>
       </li>
